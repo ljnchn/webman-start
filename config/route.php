@@ -18,18 +18,12 @@ Route::fallback(function(){
     return apiJson([], 404);
 });
 
-Route::group('/user', function () {
-    Route::get('/index', [App\Controller\Index::class, 'index']);
-    // Route::post('/login', [App\Controller\User::class, 'login']);
-})->middleware([]);
 
-Route::group('/user', function () {
-    // Route::post('/logout', [App\Controller\User::class, 'logout']);
-    // Route::post('/info', [App\Controller\User::class, 'info']);
-    // Route::post('/menu', [App\Controller\User::class, 'menu']);
- })->middleware([
-     App\Middleware\Auth::class,
- ]);
+// 引用 routes 中的路由文件
+foreach (glob(BASE_PATH . "/routes/*.php") as $filename)
+{
+    require_once $filename;
+}
 
 # 关闭自动路由
 Route::disableDefaultRoute();
