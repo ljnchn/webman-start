@@ -5,14 +5,23 @@
 ## 目录结构
 
 ├──Admin
+
 │   ├── Controller
+
 │   └── Models
+
 ├── Api
+
 │   ├── Controller
+
 │   └── Models
+
 ├── Enums
+
 ├── Middleware
+
 ├── Models
+
 └── functions.php
 
 app 目录下的文件夹全部大写（强迫症，这样代码引用的时候就能都是大写了）
