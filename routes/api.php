@@ -1,16 +1,9 @@
 <?php
+
 use Webman\Route;
 
-
-Route::group('/user', function () {
-    Route::get('/index', [App\Controller\Index::class, 'index']);
-    // Route::post('/login', [App\Controller\User::class, 'login']);
+Route::get('/api', [\App\Api\Controller\Index::class, 'index']);
+Route::group('/api', function () {
+    Route::get('/index', [\App\Api\Controller\Index::class, 'index']);
+    Route::get('/user/{uid}', [\App\Api\Controller\Index::class, 'user']);
 })->middleware([]);
-
-Route::group('/user', function () {
-    // Route::post('/logout', [App\Controller\User::class, 'logout']);
-    // Route::post('/info', [App\Controller\User::class, 'info']);
-    // Route::post('/menu', [App\Controller\User::class, 'menu']);
- })->middleware([
-     App\Middleware\Auth::class,
- ]);
