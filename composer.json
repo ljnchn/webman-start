@@ -38,8 +38,7 @@
     "php-di/php-di": "^6.4",
     "doctrine/annotations": "^1.13",
     "symfony/translation": "^6.0",
-    "symfony/cache": "^6.0",
-    "archtechx/enums": "^0.3.0"
+    "symfony/cache": "^6.0"
   },
   "suggest": {
     "ext-event": "For better performance. "
