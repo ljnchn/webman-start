@@ -5,8 +5,6 @@
  */
 
 use support\Response;
-use support\Request;
-use App\Enums\ApiCode;
 
 /**
  * @param $data
@@ -27,9 +25,8 @@ function apiJson($data, int $httpCode = 200, int $options = JSON_UNESCAPED_UNICO
  * @param integer $code
  * @return Response
  */
-function successJson(string $msg = 'success', array $data = [], int $code = null): Response
+function successJson(string $msg = 'success', array $data = [], int $code = 20000): Response
 {
-    $code = $code ?? ApiCode::SUCCESS();
     return apiJson(['code' => $code, 'msg' => $msg, 'data' => $data], 200);
 }
 
@@ -41,9 +38,8 @@ function successJson(string $msg = 'success', array $data = [], int $code = null
  * @param integer $code
  * @return Response
  */
-function failJson(string $msg = 'fail', array $data = [], int $code = null): Response
+function failJson(string $msg = 'fail', array $data = [], int $code = 50000): Response
 {
-    $code = $code ?? ApiCode::FAIL;
     return apiJson(['code' => $code, 'msg' => $msg, 'data' => $data], 200);
 }
 
