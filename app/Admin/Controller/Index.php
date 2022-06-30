@@ -1,6 +1,7 @@
 <?php
 namespace App\Admin\Controller;
 
+use support\Db;
 use support\Request;
 use support\Response;
 

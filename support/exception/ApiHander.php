@@ -2,7 +2,6 @@
 
 namespace support\exception;
 
-use App\Enums\ApiCode;
 use Webman\Http\Request;
 use Webman\Http\Response;
 use Throwable;
@@ -24,7 +23,7 @@ class ApiHander extends ExceptionHandler
     {
         $code = $exception->getCode();
 
-        $json = ['code' => $code ? $code : ApiCode::FAIL, 'msg' => $exception->getMessage()];
+        $json = ['code' => $code ? $code : 50000, 'msg' => $exception->getMessage()];
         $this->_debug && $json['traces'] = (string)$exception;
         return new Response(
             200,

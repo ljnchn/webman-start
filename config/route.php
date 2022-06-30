@@ -15,6 +15,17 @@
 use Webman\Route;
 
 Route::fallback(function(){
+    // 处理跨域 options 请求
+    response()->withHeaders([
+        'Access-Control-Allow-Credentials' => 'true',
+        'Access-Control-Allow-Origin' => request()->header('Origin', '*'),
+        'Access-Control-Allow-Methods' => '*',
+        'Access-Control-Allow-Headers' => '*',
+    ]);
+    if (request()->method() == 'OPTIONS') {
+        return response();
+    }
+
     return apiJson([], 404);
 });
 
