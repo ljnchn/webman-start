@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0b9061cde6008b3a8da90eb17d0126f",
+    "content-hash": "588c1e063cd1fc297b9a26bfd9f0d404",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3075,6 +3075,37 @@
                 "wiki": "http://www.workerman.net/doc/webman"
             },
             "time": "2022-05-04T00:44:25+00:00"
+        },
+        {
+            "name": "webman/log",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webman-php/log.git",
+                "reference": "5ec1eaadfe88a8bd08b7f2c0da74842b4c2c5c3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webman-php/log/zipball/5ec1eaadfe88a8bd08b7f2c0da74842b4c2c5c3b",
+                "reference": "5ec1eaadfe88a8bd08b7f2c0da74842b4c2c5c3b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webman\\Log\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Webman plugin webman/log",
+            "support": {
+                "issues": "https://github.com/webman-php/log/issues",
+                "source": "https://github.com/webman-php/log/tree/v1.0.5"
+            },
+            "time": "2022-07-16T10:47:38+00:00"
         },
         {
             "name": "workerman/webman-framework",

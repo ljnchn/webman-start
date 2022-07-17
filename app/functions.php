@@ -20,12 +20,12 @@ function apiJson($data, int $httpCode = 200, int $options = JSON_UNESCAPED_UNICO
 /**
  * 成功返回json
  *
- * @param string $msg
  * @param array $data
+ * @param string $msg
  * @param integer $code
  * @return Response
  */
-function successJson(string $msg = 'success', array $data = [], int $code = 20000): Response
+function successJson(array $data = [], string $msg = 'success',int $code = 20000): Response
 {
     return apiJson(['code' => $code, 'msg' => $msg, 'data' => $data], 200);
 }

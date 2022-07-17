@@ -9,7 +9,7 @@ class Index
 {
     public function index(Request $request): Response
     {
-        return successJson('this is admin');
+        return successJson([], 'this is admin');
     }
 
 }
